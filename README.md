@@ -15,3 +15,5 @@ tldr:
 sample images:
 ![Grid](sample images/Screenshot 2.png)
 ![ASCII Output](sample images/Screenshot 3.png)
+
+![Alt text](sample images/Screenshot_2.png?raw=true "Screenshot 2")
