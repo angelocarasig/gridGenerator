@@ -1,7 +1,7 @@
 import pygame
 pygame.init()
 
-WIDTH = 800
+WIDTH = 400
 WIN = pygame.display.set_mode((WIDTH, WIDTH))
 pygame.display.set_caption("Grid Generator")
 
@@ -56,11 +56,21 @@ def make_grid(rows, width):
     grid = []
     gap = width // rows
 
+    TOP = 0
+    LEFT = 0
+    BOTTOM = rows - 1
+    RIGHT = rows - 1
+
     for i in range(rows):
         grid.append([])
         for j in range(rows):
-            node = Node(i, j, gap, rows) # Adding nodes to every cell
-            grid[i].append(node)
+            if i == LEFT or i == RIGHT or j == TOP or j == BOTTOM:
+                node = Node(i, j, gap, rows) # Grid edges should be black
+                node.set_color(BLACK)
+                grid[i].append(node)
+            else:
+                node = Node(i, j, gap, rows) # Adding nodes to every cell
+                grid[i].append(node)
 
     return grid
 
@@ -164,13 +174,14 @@ def main(win):
                             elif node.is_color(YELLOW):
                                 curr_row.append("E")
                         output.append(curr_row)
-                        
-                    #Manipulating and saving to file
 
+                    #Manipulating and saving to file
+                    print_matrix(output)
                     #Because it reads column by column:
                     rotateMatrix(ROWS, output)
+                    print_matrix(output)
                     new_matrix = flipMatrix(output)
-
+                    print_matrix(new_matrix)
                     final = ""
                     for i in new_matrix:
                         for j in i:
@@ -190,6 +201,15 @@ def main(win):
 
     # Game quit
     pygame.quit()
+
+def print_matrix(matrix):
+    "Must be 2d"
+    for i in matrix:
+        for j in i:
+            print(j, end = "")
+        print("\n")
+
+    print("\n\n\n")
 
 if __name__ == "__main__":
     main(WIN)
