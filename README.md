@@ -11,3 +11,7 @@ tldr:
 * Right click = reset grid piece to empty
 * Spacebar = saves the output to a file
 * C = clears the grid so you can restart
+
+sample images:
+![Grid](sample images/Screenshot 2.png)
+![ASCII Output](sample images/Screenshot 3.png)
