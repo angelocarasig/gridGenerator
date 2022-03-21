@@ -13,7 +13,4 @@ tldr:
 * C = clears the grid so you can restart
 
 sample images:
-![Grid](sample images/Screenshot 2.png)
-![ASCII Output](sample images/Screenshot 3.png)
-
-![Alt text](sample images/Screenshot_2.png?raw=true "Screenshot 2")
+![Grid](https://i.imgur.com/Miw8zt7.png)
