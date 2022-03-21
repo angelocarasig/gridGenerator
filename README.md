@@ -14,4 +14,4 @@ tldr:
 
 sample images:
 ![Grid](https://i.imgur.com/Miw8zt7.png)
-![ASCII Output](https://imgur.com/a/43nSidh)
+![ASCII Output](https://i.imgur.com/9miEYcl.png)
